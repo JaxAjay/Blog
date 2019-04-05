@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container jumbotron">
+  <h3>Update here:</h3>
+  <legend></legend>
+  <form class="form-group" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class='btn btn-warning' type="submit" name="" value="Update">
+  </form>
+</div>
+
+
+{% endblock %}

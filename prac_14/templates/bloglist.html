@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h1 align='center'>B L O G</h1>
+  <legend></legend>
+  {% if list %}
+  {% for item in list %}
+  <div class="jumbotron  ml-10">
+
+      <h3><a href="{{ item.id }}">{{ item.title }}</a></h3>
+      <small align='right'>posted by:{{ item.author }}</small>
+
+
+  </div>
+
+  {% endfor %}
+  {% else %}
+  <div class="jumbotron">
+    <h2>Sorry :(   No Blog Yet</h2>
+
+  </div>
+  {% endif %}
+
+</div>
+
+
+{% endblock %}

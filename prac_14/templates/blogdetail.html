@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container jumbotron">
+
+  <legend><h1>Blog Details</h1></legend>
+  <ul class="list-group list-group-horizontal">
+  <li class="list-group-item">Posted by:</li>
+  <li class="list-group-item">{{ detail.author }}</li>
+
+  </ul>
+  <ul class="list-group list-group-horizontal">
+  <li class="list-group-item">Title:</li>
+  <li class="list-group-item">{{ detail.title }}</li>
+
+  </ul>
+  <ul class="list-group list-group-horizontal">
+  <li class="list-group-item">Description:</li>
+  <li class="list-group-item">{{ detail.description }} </li>
+
+  </ul>
+
+
+  <h4>Posted on: {{ detail.time }}  </h4>
+  <p></p>
+  {% if user.is_authenticated %}
+  <a href="{% url 'update' pk=detail.id %}"><input class='btn btn-danger' type="button" name="" value="Update"></a>
+  <p></p>
+  <a href="{% url 'delete' pk=detail.id %}"><input type="button" name="" value="delete"></a>
+  {% endif %}
+</div>
+
+
+{% endblock %}

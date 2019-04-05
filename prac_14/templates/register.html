@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container jumbotron">
+  <h1>Register Here!</h1>
+  <legend></legend>
+
+  <form class="form-group"  method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class ='btn btn-primary' type="submit" name="" value="Register">
+
+  </form>
+
+</div>
+
+
+{% endblock %}
