@@ -4,11 +4,12 @@
   <h3>are you sure to delete {{ blog_delete.title }}?</h3>
   <form  method="post">
     {% csrf_token %}
-    <input type="submit" name="" value="Delete">
+    <input class='btn btn-danger' type="submit" name="" value="Delete">
 
 
   </form>
-  <input type="button" name="" value="Cancel">
+  <br>
+  <input class='btn btn-primary' type="button" name="" value="Cancel">
 
 </div>
 
